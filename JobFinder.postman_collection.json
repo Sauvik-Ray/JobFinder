@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "cb33a9a0-c342-4116-9456-06d2bebeb28d",
+		"name": "JobFinder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47111288",
+		"_collection_link": "https://sray53964-6678740.postman.co/workspace/sray53964's-Workspace~5315efd6-389f-4b51-8c85-04b1ab768d5a/collection/47111288-cb33a9a0-c342-4116-9456-06d2bebeb28d?action=share&source=collection_link&creator=47111288"
+	},
+	"item": [
+		{
+			"name": "CreateJobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Scala Developer\",\r\n  \"link\": \"https://weworkremotely.com/...\",\r\n  \"descriptionSnippet\": \"Looking for a Scala developer\",\r\n  \"description\": \"Full job description here...\",\r\n  \"guid\": \"unique-guid-123\",\r\n  \"pubDate\": \"2025-09-10\",\r\n  \"category\" : \"Backend\",\r\n  \"salaryMin\" : \"120000\",\r\n  \"salaryMax\" : \"3500000\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllJobs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user1\",\r\n    \"password\":\"password1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetJobById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user1\",\r\n    \"password\":\"password1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteJobById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user1\",\r\n    \"password\":\"password1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetJobByCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/category/Backend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"category",
+						"Backend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetJobInSalaryRange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/salary?min=50000&max=12000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"salary"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "50000"
+						},
+						{
+							"key": "max",
+							"value": "12000000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
