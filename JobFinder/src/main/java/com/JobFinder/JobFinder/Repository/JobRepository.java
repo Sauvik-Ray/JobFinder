@@ -14,4 +14,6 @@ public interface JobRepository extends JpaRepository<Job, Long> {
     List<Job> findByCategory(String category);
 
     List<Job> findBySalaryMinGreaterThanEqualAndSalaryMaxLessThanEqual(Integer minSalary, Integer maxSalary);
+
+    List<Job> findByNotifiedFalse();
 }

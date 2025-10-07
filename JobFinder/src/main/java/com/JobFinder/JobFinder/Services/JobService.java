@@ -17,4 +17,6 @@ public interface JobService {
     List<JobResponse> getJobsByCategory(String category);
 
     List<JobResponse> getJobsBySalaryRange(Integer minSalary, Integer maxSalary);
+
+    List<JobResponse> getUnnotifiedJobs();
 }

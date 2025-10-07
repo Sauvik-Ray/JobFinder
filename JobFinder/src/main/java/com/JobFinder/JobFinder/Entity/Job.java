@@ -36,4 +36,7 @@ public class Job {
     private Integer salaryMin;
 
     private Integer salaryMax;
+
+    @Column(nullable = false)
+    private boolean notified = false;
 }

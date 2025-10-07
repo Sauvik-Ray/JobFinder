@@ -51,4 +51,10 @@ public class JobController {
             @RequestParam Integer max) {
         return ResponseEntity.ok(jobService.getJobsBySalaryRange(min, max));
     }
+
+    @GetMapping("/unnotified")
+    public ResponseEntity<List<JobResponse>> getUnnotifiedJobs() {
+        List<JobResponse> newJobs = jobService.getUnnotifiedJobs();
+        return new ResponseEntity<>(newJobs, HttpStatus.OK);
+    }
 }

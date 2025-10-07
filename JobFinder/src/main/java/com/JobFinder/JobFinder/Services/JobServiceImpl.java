@@ -7,6 +7,8 @@ import com.JobFinder.JobFinder.payload.JobResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -67,5 +69,17 @@ public class JobServiceImpl implements JobService {
         return jobRepository.findBySalaryMinGreaterThanEqualAndSalaryMaxLessThanEqual(minSalary, maxSalary).stream()
                 .map(job -> modelMapper.map(job, JobResponse.class))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<JobResponse> getUnnotifiedJobs() {
+        List<Job> jobs = jobRepository.findByNotifiedFalse();
+        List<JobResponse> jobResponses = jobs.stream().
+                map(job -> modelMapper.map(job, JobResponse.class)).toList();
+
+        jobs.forEach(job -> job.setNotified(true));
+        jobRepository.saveAll(jobs);
+        if (jobs.isEmpty()) return Collections.emptyList();
+        return jobResponses;
     }
 }
