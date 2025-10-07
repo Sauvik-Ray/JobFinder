@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Scala Developer\",\r\n  \"link\": \"https://weworkremotely.com/...\",\r\n  \"descriptionSnippet\": \"Looking for a Scala developer\",\r\n  \"description\": \"Full job description here...\",\r\n  \"guid\": \"unique-guid-123\",\r\n  \"pubDate\": \"2025-09-10\",\r\n  \"category\" : \"Backend\",\r\n  \"salaryMin\" : \"120000\",\r\n  \"salaryMax\" : \"3500000\"\r\n}\r\n",
+					"raw": "{\r\n  \"title\": \"Scala Developer\",\r\n  \"link\": \"https://weworkremotely.com/...\",\r\n  \"descriptionSnippet\": \"Looking for a Scala developer\",\r\n  \"description\": \"Full job description here...\",\r\n  \"guid\": \"unique-guid-123\",\r\n  \"pubDate\": \"2025-09-10\",\r\n  \"category\" : \"Backend\",\r\n  \"salaryMin\" : \"120000\",\r\n  \"salaryMax\" : \"3500000\",\r\n  \"notified\" : \"false\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -164,6 +164,34 @@
 							"key": "max",
 							"value": "12000000"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unnotified Jobs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Scala Developer\",\r\n  \"link\": \"https://weworkremotely.com/...\",\r\n  \"descriptionSnippet\": \"Looking for a Scala developer\",\r\n  \"description\": \"Full job description here...\",\r\n  \"guid\": \"unique-guid-123\",\r\n  \"pubDate\": \"2025-09-10\",\r\n  \"category\" : \"Backend\",\r\n  \"salaryMin\" : \"120000\",\r\n  \"salaryMax\" : \"3500000\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/unnotified",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"unnotified"
 					]
 				}
 			},
