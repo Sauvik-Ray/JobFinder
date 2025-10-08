@@ -31,8 +31,7 @@ This project is designed for efficiency, scalability, and easy extensibility.
 ---
 
 🖼️ Workflow Diagram
-
-<img width="1290" height="445" alt="Screenshot 2025-10-07 214231" src="https://github.com/user-attachments/assets/49c7b86d-07dd-4553-b978-52cb1521b442" />
+https://github.com/Sauvik-Ray/JobFinder/blob/main/Screenshot%202025-10-07%20214231.png
 
 
 
